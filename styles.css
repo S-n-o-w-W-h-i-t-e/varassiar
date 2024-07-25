@@ -24,8 +24,8 @@ body {
   clear: both;
   border-radius: 10px;
   overflow: hidden;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
+/*  position: fixed;
+  top: 0; */
 }
 
 h1 {
@@ -58,6 +58,20 @@ h1 {
   color: inherit;
 }
 
+#small-phone-div {
+  padding: 10px 0px 5px 30px;
+  background-color: #FF3131;
+  border-radius: 10px;
+  margin-top: 5px;
+  visibility: hidden;
+} 
+
+#small-phone {
+  font-size: 1em;
+  text-decoration: none;
+  color: inherit;
+}
+
 .nav-texts:hover {
     color:lightgray; 
     cursor:pointer;  
@@ -70,7 +84,7 @@ h1 {
 #big {
   display: flex;
   justify-content: center;
-  margin: 130px 0px 10px 0px;
+  margin: 30px 0px 10px 0px;
 } 
 #big-image {
   width: 90%;
@@ -117,10 +131,21 @@ h1 {
   text-align: right;
 }
 
-@media screen and (max-width: 1154px) {
+@media screen and (max-width: 1171px) {
   .nav-texts {
     visibility: hidden;
+    font-size: 1.6em;
   }
+  #phone {
+    visibility: visible;
+  }
+}
+
+@media screen and (max-width: 673px) {
+  .top-panel {
+    height: 90px;
+  }
+
   #phone {
     visibility: visible;
     font-size: 1em;
@@ -134,6 +159,23 @@ h1 {
   }
 }
 
+@media screen and (max-width: 461px) {
+  #phone {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 461px) {
+  #small-phone-div {
+    visibility: visible;
+  }
+}
+
+@media screen and (max-width: 337px) {
+  #main-logo {
+    width: 0px;
+  }
+}
 
 footer {
   display: flex;
