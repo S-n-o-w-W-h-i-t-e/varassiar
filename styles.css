@@ -77,6 +77,24 @@ h1 {
     cursor:pointer;  
 }
 
+#send-msg {
+  margin: 5px;
+  background-color: #FF3131;
+  border-radius: 10px;
+  padding: 10px;
+  height: auto;
+}
+
+#send-msg div {
+  float: left;
+  margin-top: 5px;
+}
+
+#send-msg-logo {
+  margin-top: 0px;
+  float: left;
+}
+
 .horizontal-lines {
   width: 50%;
 }
@@ -131,16 +149,17 @@ h1 {
   text-align: right;
 }
 
+/********** Medium devices only **********/
 @media screen and (max-width: 1171px) {
   .nav-texts {
     visibility: hidden;
-    font-size: 1.6em;
   }
   #phone {
     visibility: visible;
   }
 }
 
+/********** Small devices only **********/
 @media screen and (max-width: 673px) {
   .top-panel {
     height: 90px;
@@ -159,18 +178,17 @@ h1 {
   }
 }
 
+/********** Extra small devices only **********/
 @media screen and (max-width: 461px) {
   #phone {
     visibility: hidden;
   }
-}
-
-@media screen and (max-width: 461px) {
   #small-phone-div {
     visibility: visible;
   }
 }
 
+/********** Very Extra small devices only **********/
 @media screen and (max-width: 337px) {
   #main-logo {
     width: 0px;
@@ -186,10 +204,9 @@ footer {
 
 .footer-jpg {
   width: 30px;
-  background-color: black;
+  height: 30px;
   border-radius: 10px;
   margin: 5px;
-
 }
 
 footer p {
