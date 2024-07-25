@@ -190,7 +190,7 @@ h1 {
 }
 
 /********** Very Extra small devices only **********/
-@media screen and (max-width: 337px) {
+@media screen and (max-width: 354px) {
   #main-logo {
     width: 0px;
   }
