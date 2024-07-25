@@ -78,7 +78,7 @@ h1 {
 }
 
 #send-msg {
-  margin: 5px;
+  margin-top: 5px;
   background-color: #FF3131;
   border-radius: 10px;
   padding: 10px;
@@ -91,7 +91,8 @@ h1 {
 }
 
 #send-msg-logo {
-  margin-top: 0px;
+  margin: 0px;
+  margin-left: 5px;
   float: left;
 }
 
