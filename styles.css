@@ -58,31 +58,19 @@ h1 {
   color: inherit;
 }
 
-#small-phone-div {
-  padding: 10px 0px 5px 30px;
-  background-color: #FF3131;
-  border-radius: 10px;
-  margin-top: 5px;
-  visibility: hidden;
-} 
-
-#small-phone {
-  font-size: 1em;
-  text-decoration: none;
-  color: inherit;
-}
-
 .nav-texts:hover {
     color:lightgray; 
     cursor:pointer;  
 }
 
 #send-msg {
+  display: flex;
   margin-top: 5px;
   background-color: #FF3131;
   border-radius: 10px;
   padding: 10px;
   height: auto;
+  justify-content: center;
 }
 
 #send-msg div {
@@ -96,6 +84,21 @@ h1 {
   margin: 0px;
   margin-left: 5px;
   float: left;
+}
+
+#small-phone-div {
+  padding: 10px 0px 5px 10px;
+  background-color: #FF3131;
+  border-radius: 10px;
+  margin-top: 5px;
+  visibility: hidden;
+  text-align: center;
+} 
+
+#small-phone {
+  font-size: 1em;
+  text-decoration: none;
+  color: inherit;
 }
 
 .horizontal-lines {
@@ -160,6 +163,9 @@ h1 {
   #phone {
     visibility: visible;
   }
+  .para {
+    font-size: 0.8em;
+  }
 }
 
 /********** Small devices only **********/
@@ -193,6 +199,20 @@ h1 {
 
 /********** Very Extra small devices only **********/
 @media (max-width: 400px) {
+  #main-logo {
+    margin-top: 7px;
+    width: 30px;
+    height: 30px;
+  }
+  h1 {
+    font-size: 1.6em;
+  }
+  .top-panel {
+    height: 70px;
+  }
+}
+
+@media (max-width: 290px) {
   #main-logo {
     width: 0px;
   }
