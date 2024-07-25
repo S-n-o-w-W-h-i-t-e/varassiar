@@ -88,6 +88,8 @@ h1 {
 #send-msg div {
   float: left;
   margin-top: 5px;
+  text-decoration: none;
+  color: white;
 }
 
 #send-msg-logo {
@@ -151,7 +153,7 @@ h1 {
 }
 
 /********** Medium devices only **********/
-@media screen and (max-width: 1171px) {
+@media (max-width: 1171px) {
   .nav-texts {
     visibility: hidden;
   }
@@ -161,7 +163,7 @@ h1 {
 }
 
 /********** Small devices only **********/
-@media screen and (max-width: 673px) {
+@media (max-width: 686px) {
   .top-panel {
     height: 90px;
   }
@@ -180,7 +182,7 @@ h1 {
 }
 
 /********** Extra small devices only **********/
-@media screen and (max-width: 461px) {
+@media (max-width: 473px) {
   #phone {
     visibility: hidden;
   }
@@ -190,7 +192,7 @@ h1 {
 }
 
 /********** Very Extra small devices only **********/
-@media screen and (max-width: 354px) {
+@media (max-width: 355px) {
   #main-logo {
     width: 0px;
   }
