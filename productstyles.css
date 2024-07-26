@@ -1,0 +1,31 @@
+:root {
+  --primary-color: #ff3131; /* Define a root variable for primary color */
+}
+
+.bigblock {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.oneblock {
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+	margin: 15px;
+	border-radius: 20px;
+	text-align: center;
+	background-color: var(--primary-color);
+}
+
+.oneblock img {
+	margin: 10px 10px 0px 15px;
+	width: 90%;
+	height: 200px;
+	border-radius: 20px;
+}
+
+.oneblock p {
+	margin: 5px;
+	margin-top: 0px;
+	font-size: 1.2em;
+}
