@@ -15,6 +15,7 @@
 	border-radius: 20px;
 	text-align: center;
 	background-color: var(--primary-color);
+	overflow: hidden;
 }
 
 .oneblock img {
@@ -36,13 +37,13 @@
 	padding: 10px;
 	border-radius: 10px;
 	background-color: var(--primary-color);
+	margin: 5px;
 }
 
 @keyframes fadeIn {
   from { height: 0px; } /* Start from 0% opacity (invisible) */
   to { height: 200px; }   /* End at 100% opacity (visible) */
 }
-
 
 /*----------------------------- Media Queries -----------------------*/
 @media (max-width: 1024px) { 
@@ -52,6 +53,30 @@
 	}
 	.banana {
 		display: none;
-		animation: fadeIn 0.8s;
+		animation: fadeIn 0.5s;
+	}
+	.sweet {
+		display: none;
+		animation: fadeIn 0.5s;
+	}
+	.kappa {
+		display: none;
+		animation: fadeIn 0.5s;
+	}
+	.murukk {
+		display: none;
+		animation: fadeIn 0.5s;
+	}
+	.kadalamavu {
+		display: none;
+		animation: fadeIn 0.5s;
+	}
+	.special {
+		display: none;
+		animation: fadeIn 0.5s;
+	}
+	.other {
+		display: none;
+		animation: fadeIn 0.5s;
 	}
 /*----------------------------- Media Queries END -----------------------*/
