@@ -1,0 +1,37 @@
+.franchises {
+	background-color: var(--primary-color);
+	padding: 10px;
+	font-size: 1.2em;
+	border-radius: 10px;
+}
+
+.map {
+	align-self: center;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.map div {
+	display: flex;
+	flex-direction: column;
+	margin: 10px;
+	padding: 10px 10px 0px 10px;
+	border-radius: 10px;
+	background-color: var(--primary-color);
+	text-align: center;
+	overflow: hidden;
+	width: 70%;
+}
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++Media Queries +++++++++++++++++++++++*/
+
+@media (max-width: 500px) {
+	.franchises {
+		font-size: 0.9em;
+	}
+
+	.map div {
+		height: 200px;
+	}
+}
