@@ -1,0 +1,57 @@
+:root {
+  --primary-color: #ff3131; /* Define a root variable for primary color */
+}
+
+.bigblock {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.oneblock {
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+	margin: 15px;
+	border-radius: 20px;
+	text-align: center;
+	background-color: var(--primary-color);
+}
+
+.oneblock img {
+	margin: 10px 10px 0px 15px;
+	width: 90%;
+	height: 200px;
+	border-radius: 20px;
+}
+
+.oneblock p {
+	margin: 5px;
+	margin-top: 0px;
+	font-size: 1.2em;
+}
+
+.hidden {
+	display: none;
+	width: 100%;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: var(--primary-color);
+}
+
+@keyframes fadeIn {
+  from { height: 0px; } /* Start from 0% opacity (invisible) */
+  to { height: 200px; }   /* End at 100% opacity (visible) */
+}
+
+
+/*----------------------------- Media Queries -----------------------*/
+@media (max-width: 1024px) { 
+	.hidden {
+		display: block;
+		cursor: pointer;
+	}
+	.banana {
+		display: none;
+		animation: fadeIn 0.8s;
+	}
+/*----------------------------- Media Queries END -----------------------*/
