@@ -1,0 +1,44 @@
+.franchises {
+	background: var(--secondary-color);
+	padding: 10px;
+	font-size: 1.2em;
+	border-radius: 10px;
+}
+
+.map {
+	align-self: center;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.map div {
+	display: flex;
+	flex-direction: column;
+	margin: 10px;
+	padding: 10px 10px 0px 10px;
+	border-radius: 10px;
+	background: var(--secondary-color);
+	text-align: center;
+	overflow: hidden;
+	width: 400px;
+}
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++Media Queries +++++++++++++++++++++++*/
+
+@media (max-width: 500px) {
+	.franchises {
+		font-size: 0.9em;
+	}
+
+	.map div {
+		height: 200px;
+	}
+}
+
+@media (max-width: 800px) {
+    .map div {
+        width: 90%;
+        max-width: 400px;
+    }
+}
