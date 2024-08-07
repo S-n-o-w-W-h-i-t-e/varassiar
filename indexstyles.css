@@ -1,0 +1,47 @@
+.bigbox {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.box {
+	display: flex;
+	flex-direction: column;
+	width: 25%;
+	overflow: hidden;
+	padding: 10px;
+	background: var(--secondary-color);
+	margin: 10px;
+	text-align: center;
+	align-items: center;
+	border-radius: 30px;
+	height: 350px;
+}
+
+.box img{
+	display: flex;
+	width: 100%;
+	border-radius: 20px;
+	height: 90%;
+}
+
+.box span {
+	margin-top: 8px;
+}
+
+@media (max-width: 450px) {
+    .box {
+        width: 30%;
+        height: 180px;
+        max-width: 400px;
+        font-size: 0.7em;
+    }
+
+    #big {
+    	height: 400px;
+    }
+
+    #big-image {
+    	height: 100%;
+    }
+}
