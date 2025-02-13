@@ -1,0 +1,81 @@
+.bigblock {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.oneblock {
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+	margin: 15px;
+	border-radius: 20px;
+	text-align: center;
+	background: linear-gradient(135deg, #E5D9F2, #F0E6FA, #FAF5FF, #F0E6FA, #E5D9F2);
+		-webkit-background: linear-gradient(135deg, #E5D9F2, #F0E6FA, #FAF5FF, #F0E6FA, #E5D9F2);
+		-moz-background: linear-gradient(135deg, #E5D9F2, #F0E6FA, #FAF5FF, #F0E6FA, #E5D9F2);
+
+	overflow: hidden;
+}
+
+.oneblock img {
+	margin: 10px 10px 0px 15px;
+	width: 90%;
+	height: 200px;
+	border-radius: 20px;
+}
+
+.oneblock p {
+	margin: 5px;
+	margin-top: 0px;
+	font-size: 1.2em;
+}
+
+.hidden {
+	display: block;
+	width: 80%;
+	padding: 10px;
+	border-radius: 10px;
+	background: linear-gradient(135deg, rgba(255, 87, 51, 1), rgba(255, 120, 85, 1), rgba(255, 170, 130, 1), rgba(255, 120, 85, 1), rgba(255, 87, 51, 1));
+		-webkit-background: linear-gradient(135deg, rgba(255, 87, 51, 1), rgba(255, 120, 85, 1), rgba(255, 170, 130, 1), rgba(255, 120, 85, 1), rgba(255, 87, 51, 1));
+		-moz-background: linear-gradient(135deg, rgba(255, 87, 51, 1), rgba(255, 120, 85, 1), rgba(255, 170, 130, 1), rgba(255, 120, 85, 1), rgba(255, 87, 51, 1));
+
+	margin: 5px auto;
+	text-align: center;
+}
+
+@keyframes fadeIn {
+  from { height: 0px; }
+  to { height: 200px; }
+}
+
+
+.banana {
+		display: none;
+		animation: fadeIn 0.5s;
+	}
+.sweet {
+		display: none;
+		animation: fadeIn 0.5s;
+	}
+.kappa {
+		display: none;
+		animation: fadeIn 0.5s;
+	}
+.murukk {
+		display: none;
+		animation: fadeIn 0.5s;
+	}
+.kadalamavu {
+		display: none;
+		animation: fadeIn 0.5s;
+	}
+.special {
+		display: none;
+		animation: fadeIn 0.5s;
+	}
+.other {
+		display: none;
+		animation: fadeIn 0.5s;
+	}
+/*----------------------------- Media Queries END -----------------------*/
