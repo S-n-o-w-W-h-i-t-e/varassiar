@@ -37,44 +37,50 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 //-------------------------------------------sliding images (ONLY on index.html) -------------------------------------------
-if (window.location.pathname.includes("index.html") || window.location.pathname === "/") {
-    console.log("✅ Running slideshow code on index.html.");
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("✅ script.js initialized.");
 
-    let slideIndex = 0;
-    let slides = document.querySelectorAll(".slide");
+    // Ensure the slideshow runs on GitHub Pages and local servers
+    const isIndexPage = window.location.pathname.endsWith("index.html") || window.location.pathname === "/";
+    
+    if (isIndexPage) {
+        console.log("✅ Running slideshow code on index.html.");
 
-    function showSlide(index) {
-        if (!slides.length) {
-            console.error("❌ No slides found! Skipping showSlide().");
-            return;
+        let slideIndex = 0;
+        let slides = document.querySelectorAll(".slide");
+
+        function showSlide(index) {
+            if (!slides.length) {
+                console.error("❌ No slides found! Skipping showSlide().");
+                return;
+            }
+            slides.forEach(slide => slide.classList.remove("active"));
+            slides[index].classList.add("active");
         }
 
-        slides.forEach(slide => slide.classList.remove("active"));
-        slides[index].classList.add("active");
-    }
+        function changeSlide(n) {
+            slideIndex += n;
+            if (slideIndex < 0) { slideIndex = slides.length - 1; }
+            if (slideIndex >= slides.length) { slideIndex = 0; }
+            showSlide(slideIndex);
+        }
 
-    function changeSlide(n) {
-        slideIndex += n;
-        if (slideIndex < 0) { slideIndex = slides.length - 1; }
-        if (slideIndex >= slides.length) { slideIndex = 0; }
+        // Auto slideshow
+        function autoSlide() {
+            slideIndex++;
+            if (slideIndex >= slides.length) { slideIndex = 0; }
+            showSlide(slideIndex);
+            setTimeout(autoSlide, 5000); // Change every 5s
+        }
+
+        // Initialize Slideshow
         showSlide(slideIndex);
+        setTimeout(autoSlide, 5000);
+
+        // ✅ Ensure `changeSlide` is always available
+        window.changeSlide = changeSlide;
     }
-
-    // Auto slideshow
-    function autoSlide() {
-        slideIndex++;
-        if (slideIndex >= slides.length) { slideIndex = 0; }
-        showSlide(slideIndex);
-        setTimeout(autoSlide, 5000); // Change every 5s
-    }
-
-    // Initialize Slideshow
-    showSlide(slideIndex);
-    setTimeout(autoSlide, 5000);
-
-    window.changeSlide = changeSlide;
-}
-
+});
 //-------------------------------------------menu button-------------------------------------------
 document.addEventListener("DOMContentLoaded", function () {
     console.log("✅ script.js initialized.");
