@@ -1,4 +1,3 @@
-
 //-------------------------------------------product page-------------------------------------------
 document.addEventListener("DOMContentLoaded", function() {
     // Initialize product categories to "none" explicitly
@@ -37,60 +36,81 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+//-------------------------------------------sliding images (ONLY on index.html) -------------------------------------------
+if (window.location.pathname.includes("index.html") || window.location.pathname === "/") {
+    console.log("✅ Running slideshow code on index.html.");
 
-//-------------------------------------------sliding images-------------------------------------------
+    let slideIndex = 0;
+    let slides = document.querySelectorAll(".slide");
 
-let slideIndex = 0;
-let slides = document.querySelectorAll(".slide");
+    function showSlide(index) {
+        if (!slides.length) {
+            console.error("❌ No slides found! Skipping showSlide().");
+            return;
+        }
 
-function showSlide(index) {
-    slides.forEach(slide => slide.classList.remove("active"));
-    slides[index].classList.add("active");
-}
+        slides.forEach(slide => slide.classList.remove("active"));
+        slides[index].classList.add("active");
+    }
 
-function changeSlide(n) {
-    slideIndex += n;
-    if (slideIndex < 0) { slideIndex = slides.length - 1; }
-    if (slideIndex >= slides.length) { slideIndex = 0; }
+    function changeSlide(n) {
+        slideIndex += n;
+        if (slideIndex < 0) { slideIndex = slides.length - 1; }
+        if (slideIndex >= slides.length) { slideIndex = 0; }
+        showSlide(slideIndex);
+    }
+
+    // Auto slideshow
+    function autoSlide() {
+        slideIndex++;
+        if (slideIndex >= slides.length) { slideIndex = 0; }
+        showSlide(slideIndex);
+        setTimeout(autoSlide, 5000); // Change every 5s
+    }
+
+    // Initialize Slideshow
     showSlide(slideIndex);
+    setTimeout(autoSlide, 5000);
 }
-
-// Auto slideshow
-function autoSlide() {
-    slideIndex++;
-    if (slideIndex >= slides.length) { slideIndex = 0; }
-    showSlide(slideIndex);
-    setTimeout(autoSlide, 5000); // Change every 3s
-}
-
-// Initialize Slideshow
-showSlide(slideIndex);
-setTimeout(autoSlide, 5000);
-
-
-
 
 //-------------------------------------------menu button-------------------------------------------
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("✅ script.js initialized.");
 
+    function attachMenuDropdown() {
+        console.log("🔍 Checking for menu button...");
 
-document.addEventListener("DOMContentLoaded", function() {
-  const dropdownBtn = document.querySelector(".dropbtn");
-  const dropdownContent = document.querySelector(".dropdown-content");
+        const menuButton = document.querySelector(".dropbtn");
+        const menuContent = document.querySelector(".dropdown-content");
 
-  // Toggle dropdown on button click
-  dropdownBtn.addEventListener("click", function(event) {
-    event.stopPropagation(); // Prevents the click from immediately closing the dropdown
-    dropdownContent.classList.toggle("active");
-  });
+        if (!menuButton || !menuContent) {
+            console.error("❌ Menu button or dropdown content not found!");
+            return;
+        }
 
-  // Close dropdown when clicking outside of it
-  document.addEventListener("click", function(event) {
-    if (!dropdownBtn.contains(event.target) && !dropdownContent.contains(event.target)) {
-      dropdownContent.classList.remove("active");
+        console.log("✅ Menu button found! Attaching event listener.");
+        
+        // Remove any old event listeners before adding a new one
+        menuButton.removeEventListener("click", toggleMenu);
+        menuButton.addEventListener("click", toggleMenu);
+
+        document.addEventListener("click", function (event) {
+            if (!menuButton.contains(event.target) && !menuContent.contains(event.target)) {
+                console.log("🔒 Clicking outside, hiding menu.");
+                menuContent.style.display = "none";
+            }
+        });
+
+        console.log("✅ Menu dropdown initialized.");
     }
-  });
+
+    function toggleMenu(event) {
+        event.stopPropagation();
+        const menuContent = document.querySelector(".dropdown-content");
+        menuContent.style.display = (menuContent.style.display === "block") ? "none" : "block";
+        console.log("📂 Menu button clicked.");
+    }
+
+    console.log("🔄 Running attachMenuDropdown()...");
+    attachMenuDropdown();
 });
-
-
-window.history.replaceState({}, document.title, window.location.pathname);
-
