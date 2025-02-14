@@ -32,10 +32,13 @@ body {
 
 .top-panel {
   width: 100%;
-  height: 100px;
+  height: 80px;
   background: linear-gradient(135deg, rgba(247, 207, 216, 1), rgba(255, 190, 200, 1), rgba(255, 230, 235, 1), rgba(255, 190, 200, 1), rgba(247, 207, 216, 1));
     -webkit-background: linear-gradient(135deg, rgba(247, 207, 216, 1), rgba(255, 190, 200, 1), rgba(255, 230, 235, 1), rgba(255, 190, 200, 1), rgba(247, 207, 216, 1));
     -moz-background: linear-gradient(135deg, rgba(247, 207, 216, 1), rgba(255, 190, 200, 1), rgba(255, 230, 235, 1), rgba(255, 190, 200, 1), rgba(247, 207, 216, 1));
+
+
+
 
 
   padding: 16px;
@@ -53,28 +56,29 @@ h1 {
   font-family: 'Lobster', cursive;
   font-size: 2.8em;
   float: left;
-  padding: 3px;
   line-height: 0px;
   height: 10px;
   margin-bottom: 5px;
-  margin-left: 5px;
+  margin-left: 8px;
+  margin-top: 24px;
 }
 
 #main-logo {
   border-radius: 1000px;
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   float: left;
 }
 
 .nav-texts {
   margin: 10px;
   margin-top: 8px;
-  font-size: 1.6em;
+  font-size: 1.5em;
   float: right;
   padding: 10px;
   text-decoration: none;
   color: inherit;
+  line-height: 18px;
 }
 
 /*---------------------------------------Here starts dropdown --------------------------------------*/
@@ -234,8 +238,7 @@ h1 {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    color: black;
     padding: 10px;
     cursor: pointer;
     font-size: 24px;
