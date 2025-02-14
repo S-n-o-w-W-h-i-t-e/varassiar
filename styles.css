@@ -511,17 +511,17 @@ h1, #main-logo, .bigblock, span, h3, img {
 }
 
 @media (max-width: 344px) {
+  h1 {
+    font-size: 1.6em;
+  }
+}
+
+@media (max-width: 290px) { 
   #main-logo {
     width: 0px;
   }
   h1 {
-    font-size: 1.5em;
-  }
-}
-
-@media (max-width: 264px) { 
-  h1 {
-    font-size: 1em;
+    font-size: 1.3em;
   }
 }
 /*------------------------------------------Media Queries--------------------------*/
