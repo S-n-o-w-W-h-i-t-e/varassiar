@@ -516,7 +516,7 @@ h1, #main-logo, .bigblock, span, h3, img {
   }
 }
 
-@media (max-width: 290px) { 
+@media (max-width: 250px) { 
   #main-logo {
     width: 0px;
   }
