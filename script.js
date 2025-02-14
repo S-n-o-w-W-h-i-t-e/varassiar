@@ -37,50 +37,52 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 //-------------------------------------------sliding images (ONLY on index.html) -------------------------------------------
+
+
 document.addEventListener("DOMContentLoaded", function () {
     console.log("✅ script.js initialized.");
 
-    // Ensure the slideshow runs on GitHub Pages and local servers
-    const isIndexPage = window.location.pathname.endsWith("index.html") || window.location.pathname === "/";
-    
-    if (isIndexPage) {
-        console.log("✅ Running slideshow code on index.html.");
+    // ✅ Declare slideIndex globally
+    window.slideIndex = 0;
+    let slides = document.querySelectorAll(".slide");
 
-        let slideIndex = 0;
-        let slides = document.querySelectorAll(".slide");
-
-        function showSlide(index) {
-            if (!slides.length) {
-                console.error("❌ No slides found! Skipping showSlide().");
-                return;
-            }
-            slides.forEach(slide => slide.classList.remove("active"));
-            slides[index].classList.add("active");
+    function showSlide(index) {
+        if (!slides.length) {
+            console.error("❌ No slides found! Skipping showSlide().");
+            return;
         }
-
-        function changeSlide(n) {
-            slideIndex += n;
-            if (slideIndex < 0) { slideIndex = slides.length - 1; }
-            if (slideIndex >= slides.length) { slideIndex = 0; }
-            showSlide(slideIndex);
-        }
-
-        // Auto slideshow
-        function autoSlide() {
-            slideIndex++;
-            if (slideIndex >= slides.length) { slideIndex = 0; }
-            showSlide(slideIndex);
-            setTimeout(autoSlide, 5000); // Change every 5s
-        }
-
-        // Initialize Slideshow
-        showSlide(slideIndex);
-        setTimeout(autoSlide, 5000);
-
-        // ✅ Ensure `changeSlide` is always available
-        window.changeSlide = changeSlide;
+        slides.forEach(slide => slide.classList.remove("active"));
+        slides[index].classList.add("active");
     }
+
+    window.changeSlide = function (n) {
+        console.log("🔄 Changing slide:", n);
+
+        if (!slides.length) {
+            console.error("❌ No slides found!");
+            return;
+        }
+
+        slideIndex += n;
+        if (slideIndex < 0) { slideIndex = slides.length - 1; }
+        if (slideIndex >= slides.length) { slideIndex = 0; }
+        showSlide(slideIndex);
+    };
+
+    function autoSlide() {
+        slideIndex++;
+        if (slideIndex >= slides.length) { slideIndex = 0; }
+        showSlide(slideIndex);
+        setTimeout(autoSlide, 5000); // Change every 5s
+    }
+
+    // ✅ Initialize Slideshow
+    showSlide(slideIndex);
+    setTimeout(autoSlide, 5000);
+
+    console.log("✅ changeSlide is now globally available.");
 });
+
 //-------------------------------------------menu button-------------------------------------------
 document.addEventListener("DOMContentLoaded", function () {
     console.log("✅ script.js initialized.");
