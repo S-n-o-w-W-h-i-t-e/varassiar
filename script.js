@@ -71,6 +71,8 @@ if (window.location.pathname.includes("index.html") || window.location.pathname 
     // Initialize Slideshow
     showSlide(slideIndex);
     setTimeout(autoSlide, 5000);
+
+    window.changeSlide = changeSlide;
 }
 
 //-------------------------------------------menu button-------------------------------------------
